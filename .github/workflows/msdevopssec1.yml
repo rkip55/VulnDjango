@@ -12,6 +12,11 @@ jobs:
     # MSDO runs on windows-latest and ubuntu-latest.
     # macos-latest supporting coming soon
     runs-on: windows-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    
 
     steps:
     - uses: actions/checkout@v2
