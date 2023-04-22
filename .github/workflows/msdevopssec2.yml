@@ -1,21 +1,20 @@
 name: MSDO windows-latest
 on: 
-         push:
+     push:
           branches: [ main ] 
-         pull_request:
-         branches: [ main ] 
-         workflow_dispatch:
+          pull_request:
+          branches: [ main ] 
+          workflow_dispatch:
      
-		   jobs: 
+	jobs: 
          sample:
            # MSDO runs on windows-latest and ubuntu-latest. 
            # macos-latest supporting coming soon
          runs-on: windows-latest 
         
-				 steps:
+	steps:
          - uses: actions/checkout@v3
-         
-				 - uses: actions/setup-dotnet@v3 
+         - uses: actions/setup-dotnet@v3 
            with:
              dotnet-version: |
                5.0.x
